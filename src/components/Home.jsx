@@ -36,22 +36,22 @@ const Home = () => {
     <div>
       <div className="flex flex-row gap-7 place-content-between">
         <input
-          className="p-2 rounded-2xl border-2 border-black mt-4 text-white"
+          className="p-2 w-80 rounded-2xl border-2 border-black mt-4 dark:text-white text-black "
           type="text"
           placeholder="Enter title here"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-        />
+        /> 
         <button
           onClick={createPaste}
-          className="p-2 rounded-2xl mt-4 border-2 border-black text-white"
+          className="p-2 rounded-2xl mt-4 border-2 border-black dark:text-white text-black"
         >
           {pasteId ? "Update My Paste" : "Create New Paste"}
         </button>
       </div>
       <div>
         <textarea
-          className="rounded-2xl mt-4 min-w-[500px] border-black border-2"
+          className="rounded-2xl mt-4 min-w-[500px] border-black border-2 text-gray-200"
           value={value}
           placeholder="Enter content here"
           onChange={(e) => setValue(e.target.value)}
